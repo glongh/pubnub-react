@@ -1,18 +1,29 @@
 /* Application specific CSS */
 
-/* ChatInput styles */
-footer {
-  color: white;
-  position: fixed;
-  padding: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 130px;
+.message-container {
+  height: 100vh;
+  flex-direction: column;
 }
 
-footer .input-field input,
-button {
+.message-container, .message-form {
+  display: flex;
+}
+
+.message-form {
+  flex: 1;
+  max-height: 136px;
+  background-color: #009688 !important;
+  color: white;
+}
+
+.message-list {
+  flex: 1;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.message-form .input-field input {
   border-color: #FFFFFF;
 }
 
@@ -20,16 +31,49 @@ button {
   font-style: italic;
 }
 
-/* ChatHistory styles */
-.collection {
- margin-bottom:130px;
- margin-top: -1px;
+.mdi-communication-chat {
+  color: white;
 }
 
-.message-date {
-  color: #585858;
+.collection .collection-item:last-child {
+  border-bottom: 0.1em solid #DCDCDC;
 }
 
-body {
-  background: #EEEEEE;
+/* -------- Online user list ---------- */
+
+.online-user-list, .online-user-list ul {
+  display: flex;
+}
+
+.online-user-list {
+  margin: 0;
+  height: 68px;
+  background-color: #009688 !important;
+}
+
+.online-user-list ul {
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 5px;
+}
+
+.online-user-list li{
+  display: inline-block;
+}
+
+.online-user-list img{
+  margin: 4px;
+  width: 50px;
+}
+
+.online-users-number{
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.online-users-number i{
+  font-size: 50px;
+  padding-right: 10px;
 }

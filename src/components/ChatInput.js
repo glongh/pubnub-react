@@ -36,7 +36,7 @@ class ChatInput extends React.Component {
     const { props, onSubmit } = this;
     const imgURL = '//robohash.org/' + props.userID + '?set=set2&bgset=bg2&size=70x70';
     return (
-      <footer className="teal">
+      <footer className="message-form">
         <form className="container" onSubmit={ onSubmit }>
           <div className="row">
             <div className="input-field col s10">
